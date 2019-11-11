@@ -1,14 +1,13 @@
-package com.example.myaguilaapp
+package com.example.myaguilaapp.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
+import com.example.myaguilaapp.R
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
-import kotlinx.android.synthetic.main.activity_main.*
+import dagger.android.support.DaggerAppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : DaggerAppCompatActivity() {
     //const
     private val TAG = "MainActivity"
     private val ERROR_DIALOG_REQUEST = 9001
@@ -17,9 +16,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if(isMapServiceOk()){
+        /*if(isMapServiceOk()){
             initMap()
-        }
+        }*/
     }
     private fun isMapServiceOk() : Boolean{
         Log.d(TAG, "inServicesOk:  checking google services version")
@@ -41,10 +40,11 @@ class MainActivity : AppCompatActivity() {
         return false
     }
 
-    private fun initMap(){
+   /* private fun initMap(){
         btn_map.setOnClickListener {
             val intent = Intent(this@MainActivity, MapActivity::class.java)
             startActivity(intent)
         }
-    }
+    }*/
+
 }
