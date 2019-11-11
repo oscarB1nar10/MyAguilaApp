@@ -5,7 +5,7 @@ Well, the project is a map that allows follow track about a "user" through polyl
 straight line)
 
 #### why the project is usefull?
-The project is usefull becouse accomplish with task previously with flexible architecture and technology 
+The project is usefull because accomplish with task previously with flexible architecture and technology 
   #### **Architecture and technology** 
   - MVVM architecture: in this case i omitted VM and repository
   - Dagger: as di framework
